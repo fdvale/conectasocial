@@ -30,3 +30,37 @@ const cep = document.querySelector("#cep");
 cpf?.addEventListener("input", () => cpf.value = mascaraCPF(cpf.value));
 telefone?.addEventListener("input", () => telefone.value = mascaraTelefone(telefone.value));
 cep?.addEventListener("input", () => cep.value = mascaraCEP(cep.value));
+
+
+const botaoMenu = document.querySelector(".menu-toggle");
+const menuPrincipal = document.querySelector(".menu-principal");
+
+if (botaoMenu && menuPrincipal) {
+    botaoMenu.addEventListener("click", function () {
+        const aberto = menuPrincipal.classList.toggle("ativo");
+
+        botaoMenu.setAttribute("aria-expanded", aberto);
+
+        botaoMenu.setAttribute(
+            "aria-label",
+            aberto ? "Fechar menu" : "Abrir menu"
+        );
+    });
+}
+
+const formulario = document.querySelector("form");
+const toast = document.querySelector("#toast");
+
+if (formulario && toast) {
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (formulario.checkValidity()) {
+            toast.classList.add("ativo");
+
+            setTimeout(function () {
+                toast.classList.remove("ativo");
+            }, 4000);
+        }
+    });
+}
