@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #222; background: #f7f7f7; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.cabecalho { background: #fff; border-bottom: 1px solid #ddd; padding: 1rem 0; }
+.cabecalho .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: #222; }
+nav ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+nav a { color: #222; }
+main { padding: 2rem 0; }
+section { margin-bottom: 2.5rem; }
+.hero img { width: 100%; height: auto; display: block; border-radius: 12px; margin: 1rem 0; }
+.destaque { font-size: 1.2rem; }
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+article, fieldset { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 1.25rem; }
+fieldset { margin-bottom: 1.5rem; }
+legend { font-weight: bold; padding: 0 .5rem; }
+label { display: block; margin-top: .8rem; }
+input, select, textarea { width: 100%; padding: .7rem; margin-top: .3rem; border: 1px solid #aaa; border-radius: 6px; font: inherit; }
+input[type="checkbox"] { width: auto; margin-right: .4rem; }
+.linha-check { display: flex; align-items: center; gap: .4rem; }
+.botao, button { display: inline-block; padding: .7rem 1rem; border: 0; border-radius: 6px; background: #222; color: #fff; text-decoration: none; cursor: pointer; }
+address { font-style: normal; }
+footer { background: #222; color: #fff; padding: 1.25rem 0; margin-top: 2rem; }
+@media (max-width: 650px) {
+  .cabecalho .container, nav ul { flex-direction: column; align-items: flex-start; }
+}
