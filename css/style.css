@@ -374,3 +374,18 @@ footer { background: #222; color: #fff; padding: 1.25rem 0; margin-top: 2rem; }
     }
 }
 
+.campo-erro {
+    border: 2px solid #E65353;
+}
+
+.campo-sucesso {
+    border: 2px solid #2EAD68;
+}
+
+.mensagem-erro {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    color: #E65353;
+    font-size: 0.875rem;
+}

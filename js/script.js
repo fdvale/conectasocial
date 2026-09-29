@@ -1,3 +1,6 @@
+import { gerarCardsProjetos } from "./projetos.js";
+import { configurarFormulario } from "./formulario.js";
+
 const botaoMenu = document.querySelector(".menu-toggle");
 const menuPrincipal = document.querySelector(".menu-principal");
 
@@ -14,101 +17,11 @@ if (botaoMenu && menuPrincipal) {
     });
 }
 
-function configurarFormulario() {
-    const formulario = document.querySelector("#form-cadastro");
-    const toast = document.querySelector("#toast");
-
-    if (!formulario || !toast) {
-        return;
-    }
-
-    // Máscaras automáticas
-    const cpf = document.querySelector("#cpf");
-    const telefone = document.querySelector("#telefone");
-    const cep = document.querySelector("#cep");
-
-    if (cpf) {
-        cpf.addEventListener("input", function () {
-            let valor = cpf.value.replace(/\D/g, "").slice(0, 11);
-
-            valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
-            valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
-            valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
-            cpf.value = valor;
-        });
-    }
-
-    if (telefone) {
-        telefone.addEventListener("input", function () {
-            let valor = telefone.value.replace(/\D/g, "").slice(0, 11);
-
-            valor = valor.replace(/^(\d{2})(\d)/, "($1) $2");
-            valor = valor.replace(/(\d{5})(\d{1,4})$/, "$1-$2");
-
-            telefone.value = valor;
-        });
-    }
-
-    if (cep) {
-        cep.addEventListener("input", function () {
-            let valor = cep.value.replace(/\D/g, "").slice(0, 8);
-
-            valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
-
-            cep.value = valor;
-        });
-    }
-
-    // Envio do formulário e toast
-    formulario.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        if (formulario.checkValidity()) {
-            toast.classList.add("ativo");
-
-            setTimeout(function () {
-                toast.classList.remove("ativo");
-            }, 4000);
-        }
-    });
-}
-
 // ========================================
 // ROTEAMENTO SPA
 // ========================================
 
 const conteudoPrincipal = document.querySelector("#conteudo-principal");
-
-const projetos = [
-    {
-        titulo: "Inclusão Digital",
-        descricao: "Oficinas de tecnologia e competências digitais para ampliar oportunidades e autonomia."
-    },
-    {
-        titulo: "Educação para Todos",
-        descricao: "Ações de apoio educacional e incentivo à aprendizagem em comunidades atendidas."
-    },
-    {
-        titulo: "Apoio à Pessoa Idosa",
-        descricao: "Atividades de convivência, inclusão e fortalecimento de vínculos sociais."
-    },
-    {
-        titulo: "Bem-Estar Comunitário",
-        descricao: "Iniciativas voltadas à qualidade de vida, informação e fortalecimento comunitário."
-    }
-];
-
-function gerarCardsProjetos() {
-    return projetos.map(function (projeto) {
-        return `
-            <article class="col-3">
-                <h2>${projeto.titulo}</h2>
-                <p>${projeto.descricao}</p>
-            </article>
-        `;
-    }).join("");
-}
 
 const paginas = {
     inicio: `
