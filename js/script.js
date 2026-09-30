@@ -32,12 +32,23 @@ const paginas = {
                     Transformando comunidades por meio da colaboração.
                 </p>
 
-                <img
-                    src="imagens/banner-conectasocial.png"
-                    alt="Voluntários participando de uma ação comunitária da ConectaSocial"
-                    width="1200"
-                    height="600"
-                >
+                <picture>
+    <source
+        type="image/webp"
+        srcset="
+            imagens/banner-conectasocial-600.webp 600w,
+            imagens/banner-conectasocial-1200.webp 1200w
+        "
+        sizes="(max-width: 767px) 92vw, 1200px"
+    >
+
+    <img
+        src="imagens/banner-conectasocial.png"
+        alt="Voluntários participando de uma ação comunitária da ConectaSocial"
+        width="1200"
+        height="600"
+    >
+</picture>
 
                 <p>
                     A ConectaSocial é uma organização fictícia sem fins lucrativos
