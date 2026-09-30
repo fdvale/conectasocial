@@ -52,23 +52,30 @@ body.alto-contraste footer {
     border-color: #FFFFFF;
 }
 
+/* Identidade e navegação principal em branco */
 body.alto-contraste .logo,
-body.alto-contraste nav a,
-body.alto-contraste main a:not(.botao) {
-    color: #FFFF00;
+body.alto-contraste nav a {
+    color: #FFFFFF;
 }
 
+/* Links de conteúdo continuam azuis, com contraste adequado no fundo preto */
+body.alto-contraste main a:not(.botao) {
+    color: #66B2FF;
+}
+
+/* Botões permanecem pretos, com texto branco e borda visível */
 body.alto-contraste .botao,
 body.alto-contraste button {
-    background-color: #FFFF00;
-    color: #000000;
+    background-color: #000000;
+    color: #FFFFFF;
     border: 2px solid #FFFFFF;
 }
 
+/* Hover em chumbo, mantendo o texto branco */
 body.alto-contraste .botao:hover,
 body.alto-contraste button:hover {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #333333;
+    color: #FFFFFF;
 }
 
 body.alto-contraste input,
@@ -87,8 +94,8 @@ body.alto-contraste textarea::placeholder {
 
 body.alto-contraste .submenu a:hover,
 body.alto-contraste .submenu a:focus {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #333333;
+    color: #FFFFFF;
 }
 
 body.alto-contraste .toast {
@@ -103,7 +110,7 @@ body.alto-contraste .mensagem-erro {
 
 body.alto-contraste .campo-erro,
 body.alto-contraste input:not(:placeholder-shown):invalid {
-    border-color: #FF6B6B;
+    border-color: #FF8080;
 }
 
 body.alto-contraste .campo-sucesso,
@@ -111,12 +118,13 @@ body.alto-contraste input:not(:placeholder-shown):valid {
     border-color: #00FF66;
 }
 
+/* Foco visível sem uso de amarelo */
 body.alto-contraste .botao:focus-visible,
 body.alto-contraste button:focus-visible,
 body.alto-contraste a:focus-visible,
 body.alto-contraste input:focus-visible,
 body.alto-contraste select:focus-visible,
 body.alto-contraste textarea:focus-visible {
-    outline: 3px solid #FFFF00;
+    outline: 3px solid #66B2FF;
     outline-offset: 3px;
 }
