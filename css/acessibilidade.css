@@ -1,0 +1,130 @@
+/* ========================================
+   ACESSIBILIDADE E CONTRASTE
+   ======================================== */
+
+/* Ajustes de contraste no tema padrão */
+input:not(:placeholder-shown):valid,
+.campo-sucesso {
+    border-color: #167A3C;
+}
+
+input:not(:placeholder-shown):invalid,
+input:required:focus:invalid,
+select:required:focus:invalid,
+textarea:required:focus:invalid,
+.campo-erro {
+    border-color: #B42318;
+}
+
+.mensagem-erro {
+    color: #B42318;
+}
+
+.toast {
+    background-color: #167A3C;
+}
+
+.botao:focus-visible,
+button:focus-visible {
+    outline-color: #005FCC;
+}
+
+.contraste-toggle {
+    white-space: nowrap;
+}
+
+/* ========================================
+   MODO DE ALTO CONTRASTE
+   ======================================== */
+
+body.alto-contraste {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+body.alto-contraste .cabecalho,
+body.alto-contraste article,
+body.alto-contraste fieldset,
+body.alto-contraste .submenu,
+body.alto-contraste footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+/* Identidade e navegação principal em branco */
+body.alto-contraste .logo,
+body.alto-contraste nav a {
+    color: #FFFFFF;
+}
+
+/* Links de conteúdo continuam azuis, com contraste adequado no fundo preto */
+body.alto-contraste main a:not(.botao) {
+    color: #66B2FF;
+}
+
+/* Botões permanecem pretos, com texto branco e borda visível */
+body.alto-contraste .botao,
+body.alto-contraste button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+/* Hover em chumbo, mantendo o texto branco */
+body.alto-contraste .botao:hover,
+body.alto-contraste button:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+body.alto-contraste input::placeholder,
+body.alto-contraste textarea::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+body.alto-contraste .submenu a:hover,
+body.alto-contraste .submenu a:focus {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+body.alto-contraste .toast {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+body.alto-contraste .mensagem-erro {
+    color: #FF8080;
+}
+
+body.alto-contraste .campo-erro,
+body.alto-contraste input:not(:placeholder-shown):invalid {
+    border-color: #FF8080;
+}
+
+body.alto-contraste .campo-sucesso,
+body.alto-contraste input:not(:placeholder-shown):valid {
+    border-color: #00FF66;
+}
+
+/* Foco visível sem uso de amarelo */
+body.alto-contraste .botao:focus-visible,
+body.alto-contraste button:focus-visible,
+body.alto-contraste a:focus-visible,
+body.alto-contraste input:focus-visible,
+body.alto-contraste select:focus-visible,
+body.alto-contraste textarea:focus-visible {
+    outline: 3px solid #66B2FF;
+    outline-offset: 3px;
+}
